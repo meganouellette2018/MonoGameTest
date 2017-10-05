@@ -1,0 +1,2 @@
+D:\OneDrive - Bay Path Regional School District\Monogame\MonoGameTest\DanAndMeganTest\obj\x86\Debug\DanAndMeganTest.csprojResolveAssemblyReference.cache
+D:\OneDrive - Bay Path Regional School District\Monogame\MonoGameTest\DanAndMeganTest\obj\x86\Debug\DanAndMeganTest.csproj.CoreCompileInputs.cache
