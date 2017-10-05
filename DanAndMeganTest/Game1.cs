@@ -29,7 +29,7 @@ namespace DanAndMeganTest
         {
 
             spriteBatch = new SpriteBatch(GraphicsDevice);
-
+            Components.Add(new Enemies(this, spriteBatch, 100, 200, 75, 75));
 
         }
 
@@ -53,8 +53,9 @@ namespace DanAndMeganTest
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-
+            spriteBatch.Begin();
             base.Draw(gameTime);
+            spriteBatch.End();
         }
     }
 }
