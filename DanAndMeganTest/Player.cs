@@ -12,6 +12,7 @@ namespace DanAndMeganTest
         private Rectangle boundingBox;
         private int xVelocity, yVelocity;
         private SpriteBatch sb;
+        private Color color;
 
 
         public Player (Game game, SpriteBatch sb, int x, int y, int xv, int yv) : base(game)
@@ -22,6 +23,7 @@ namespace DanAndMeganTest
             boundingBox = new Rectangle(x, y, 75, 75);
             xVelocity = xv;
             yVelocity = yv;
+            color = Color.Purple;
         }
 
         public override void Update(GameTime gameTime)
@@ -35,5 +37,12 @@ namespace DanAndMeganTest
 
 
         }
+
+        public override void Draw(GameTime gameTime)
+        {
+            sb.Draw(solidTexture, boundingBox, color);
+            base.Draw(gameTime);
+        }
+
     }
 }

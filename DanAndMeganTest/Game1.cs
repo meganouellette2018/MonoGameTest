@@ -30,6 +30,7 @@ namespace DanAndMeganTest
 
             spriteBatch = new SpriteBatch(GraphicsDevice);
             Components.Add(new Enemies(this, spriteBatch, 100, 200, 75, 75));
+            Components.Add(new Player(this, spriteBatch, 100, 200, 75, 75));
 
         }
 
@@ -44,6 +45,7 @@ namespace DanAndMeganTest
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
+         
 
 
             base.Update(gameTime);
