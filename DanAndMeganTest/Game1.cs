@@ -33,6 +33,8 @@ namespace DanAndMeganTest
 
             Components.Add(new Player(this, spriteBatch, 250, 250, 100, 100));
 
+            Components.Add(new Player(this, spriteBatch, 400, 300, 100, 100));
+
 
         }
 

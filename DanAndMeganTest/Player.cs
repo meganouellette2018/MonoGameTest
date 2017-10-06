@@ -29,9 +29,31 @@ namespace DanAndMeganTest
         public override void Update(GameTime gameTime)
         {
 
+            KeyboardState state = Keyboard.GetState();
+            bool leftArrowKeyDown = state.IsKeyDown(Keys.Left);
+            bool rightArrowKeyDown = state.IsKeyDown(Keys.Right);
+            bool upArrowKeyDown = state.IsKeyDown(Keys.Up);
+            bool downArrowKeyDown = state.IsKeyDown(Keys.Down);
 
+            if (state.IsKeyDown(Keys.Left))
+            {
+                boundingBox.X -= 5;
+            }
 
+            if (state.IsKeyDown(Keys.Right))
+            {
+                boundingBox.X += 5;
+            }
 
+            if (state.IsKeyDown(Keys.Up))
+            {
+                boundingBox.Y -= 5;
+            }
+
+            if (state.IsKeyDown(Keys.Down))
+            {
+                boundingBox.Y += 5;
+            }
 
             base.Update(gameTime);
 
