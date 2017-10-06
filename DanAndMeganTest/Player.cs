@@ -20,7 +20,7 @@ namespace DanAndMeganTest
             this.sb = sb;
             solidTexture = new Texture2D(GraphicsDevice, 1, 1);
             solidTexture.SetData(new Color[] { Color.White });
-            boundingBox = new Rectangle(x, y, 75, 75);
+            boundingBox = new Rectangle(x, y, 25, 25);
             xVelocity = xv;
             yVelocity = yv;
             color = Color.Purple;
@@ -37,22 +37,22 @@ namespace DanAndMeganTest
 
             if (state.IsKeyDown(Keys.Left))
             {
-                boundingBox.X -= 5;
+                boundingBox.X -= 10;
             }
 
             if (state.IsKeyDown(Keys.Right))
             {
-                boundingBox.X += 5;
+                boundingBox.X += 10;
             }
 
             if (state.IsKeyDown(Keys.Up))
             {
-                boundingBox.Y -= 5;
+                boundingBox.Y -= 10;
             }
 
             if (state.IsKeyDown(Keys.Down))
             {
-                boundingBox.Y += 5;
+                boundingBox.Y += 10;
             }
 
             base.Update(gameTime);

@@ -70,21 +70,21 @@ namespace DanAndMeganTest
                 int xv = r.Next(0, 2);
                 if (xv == 0)
                 {
-                    xv = 10;
+                    xv = 8;
                 }
                 else
                 {
-                    xv = -10;
+                    xv = -8;
                 }
                 int yv = r.Next(0, 2);
                 if (yv == 0)
                 {
-                    yv = 10;
+                    yv = 8;
                 }
 
                 else
                 {
-                    yv = -10;
+                    yv = -8;
                 }
 
                 int x = r.Next(0, 1150);
