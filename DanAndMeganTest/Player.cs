@@ -12,6 +12,7 @@ namespace DanAndMeganTest
         private Rectangle boundingBox;
         private int xVelocity, yVelocity;
         private SpriteBatch sb;
+        private Color color;
 
 
         public Player (Game game, SpriteBatch sb, int x, int y, int xv, int yv) : base(game)
@@ -22,14 +23,37 @@ namespace DanAndMeganTest
             boundingBox = new Rectangle(x, y, 75, 75);
             xVelocity = xv;
             yVelocity = yv;
+            color = Color.Purple;
         }
 
         public override void Update(GameTime gameTime)
         {
 
+            KeyboardState state = Keyboard.GetState();
+            bool leftArrowKeyDown = state.IsKeyDown(Keys.Left);
+            bool rightArrowKeyDown = state.IsKeyDown(Keys.Right);
+            bool upArrowKeyDown = state.IsKeyDown(Keys.Up);
+            bool downArrowKeyDown = state.IsKeyDown(Keys.Down);
 
+            if (state.IsKeyDown(Keys.Left))
+            {
+                boundingBox.X -= 5;
+            }
 
+            if (state.IsKeyDown(Keys.Right))
+            {
+                boundingBox.X += 5;
+            }
 
+            if (state.IsKeyDown(Keys.Up))
+            {
+                boundingBox.Y -= 5;
+            }
+
+            if (state.IsKeyDown(Keys.Down))
+            {
+                boundingBox.Y += 5;
+            }
 
             base.Update(gameTime);
 
@@ -38,8 +62,10 @@ namespace DanAndMeganTest
 
         public override void Draw(GameTime gameTime)
         {
-            sb.Draw(solidTexture, boundingBox, Color.Blue);
+
+            sb.Draw(solidTexture, boundingBox, color);
             base.Draw(gameTime);
         }
+        }
     }
-}
+
