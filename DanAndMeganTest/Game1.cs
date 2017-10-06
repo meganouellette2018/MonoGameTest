@@ -29,7 +29,8 @@ namespace DanAndMeganTest
 
         protected override void Initialize()
         {
-    
+
+            this.IsMouseVisible = true;
 
             base.Initialize();
         }
