@@ -76,6 +76,8 @@ namespace DanAndMeganTest
                 boundingBox.X -= 30;
             }
 
+            
+
             base.Update(gameTime);
 
 
