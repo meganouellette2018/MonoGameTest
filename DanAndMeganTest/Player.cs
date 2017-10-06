@@ -31,7 +31,7 @@ namespace DanAndMeganTest
             rightControl = rc;
             upControl = uc;
             downControl = dc;
-        color = Color.Purple;
+            color = Color.Purple;
         }
 
         public override void Update(GameTime gameTime)
@@ -64,31 +64,7 @@ namespace DanAndMeganTest
                 boundingBox.Y += 10;
             }
 
-<<<<<<< HEAD
-            if (state.IsKeyDown(Keys.Space) && state.IsKeyDown(Keys.Left))
-            {
-                boundingBox.X -= 30;
-            }
 
-            if (state.IsKeyDown(Keys.Space) && state.IsKeyDown(Keys.Right))
-            {
-                boundingBox.X += 30;
-            }
-
-            if (state.IsKeyDown(Keys.Space) && state.IsKeyDown(Keys.Up))
-            {
-                boundingBox.Y -= 30;
-            }
-
-            if (state.IsKeyDown(Keys.Space) && state.IsKeyDown(Keys.Down))
-            {
-                boundingBox.X -= 30;
-            }
-
-            
-
-=======
->>>>>>> 3ba3e1c04af594de1a8720ac596d83be5d07e984
             base.Update(gameTime);
 
 
