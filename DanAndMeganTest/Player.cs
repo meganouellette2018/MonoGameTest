@@ -35,5 +35,11 @@ namespace DanAndMeganTest
 
 
         }
+
+        public override void Draw(GameTime gameTime)
+        {
+            sb.Draw(solidTexture, boundingBox, Color.Blue);
+            base.Draw(gameTime);
+        }
     }
 }
