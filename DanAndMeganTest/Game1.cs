@@ -41,7 +41,8 @@ namespace DanAndMeganTest
             spriteBatch = new SpriteBatch(GraphicsDevice);
             
 
-            Components.Add(new Player(this, spriteBatch, 250, 250, 100, 100));
+            Components.Add(new Player(this, spriteBatch, 250, 250, 100, 100, Keys.Left, Keys.Right, Keys.Up, Keys.Down));
+            Components.Add(new Player(this, spriteBatch, 250, 40, 100, 100, Keys.A, Keys.D, Keys.W, Keys.S));
             r = new Random();
 
             
