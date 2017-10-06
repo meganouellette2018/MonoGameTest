@@ -30,7 +30,9 @@ namespace DanAndMeganTest
 
             spriteBatch = new SpriteBatch(GraphicsDevice);
             Components.Add(new Enemies(this, spriteBatch, 100, 200, 75, 75));
-            Components.Add(new Player(this, spriteBatch, 100, 200, 75, 75));
+
+            Components.Add(new Player(this, spriteBatch, 250, 250, 100, 100));
+
 
         }
 
