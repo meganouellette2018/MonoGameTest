@@ -18,7 +18,7 @@ namespace DanAndMeganTest
             this.sb = sb;
             solidTexture = new Texture2D(GraphicsDevice, 1, 1);
             solidTexture.SetData(new Color[] { Color.White });
-            boundingBox = new Rectangle(50, 100, 25,25);
+            boundingBox = new Rectangle(x, y, 75,75);
             xVelocity = xv;
             yVelocity = yv;
             color = Color.Red;

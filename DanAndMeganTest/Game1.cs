@@ -21,6 +21,9 @@ namespace DanAndMeganTest
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            graphics.PreferredBackBufferWidth = 1200;
+            graphics.PreferredBackBufferHeight = 600;
+            graphics.ApplyChanges();
         }
 
 
@@ -36,12 +39,12 @@ namespace DanAndMeganTest
         {
 
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            Components.Add(new Enemies(this, spriteBatch, 100, 200, 75, 75));
+            
 
             Components.Add(new Player(this, spriteBatch, 250, 250, 100, 100));
             r = new Random();
 
-            Components.Add(new Player(this, spriteBatch, 400, 300, 100, 100));
+            
 
 
         }
@@ -87,7 +90,7 @@ namespace DanAndMeganTest
                 int x = r.Next(0, 1150);
                 int y = r.Next(0, 650);
 
-                Components.Add(new Player(this, spriteBatch, x, y, xv, yv));
+                Components.Add(new Enemies(this, spriteBatch, x, y, xv, yv));
             }
 
         }
