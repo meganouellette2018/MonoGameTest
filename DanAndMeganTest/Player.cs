@@ -13,9 +13,13 @@ namespace DanAndMeganTest
         private int xVelocity, yVelocity;
         private SpriteBatch sb;
         private Color color;
+        private Keys leftControl;
+        private Keys rightControl;
+        private Keys upControl;
+        private Keys downControl; 
 
 
-        public Player (Game game, SpriteBatch sb, int x, int y, int xv, int yv) : base(game)
+        public Player (Game game, SpriteBatch sb, int x, int y, int xv, int yv, Keys lc, Keys rc, Keys uc, Keys dc) : base(game)
         {
             this.sb = sb;
             solidTexture = new Texture2D(GraphicsDevice, 1, 1);
@@ -23,39 +27,44 @@ namespace DanAndMeganTest
             boundingBox = new Rectangle(x, y, 25, 25);
             xVelocity = xv;
             yVelocity = yv;
-            color = Color.Purple;
+            leftControl = lc;
+            rightControl = rc;
+            upControl = uc;
+            downControl = dc;
+        color = Color.Purple;
         }
 
         public override void Update(GameTime gameTime)
         {
 
             KeyboardState state = Keyboard.GetState();
-            bool leftArrowKeyDown = state.IsKeyDown(Keys.Left);
-            bool rightArrowKeyDown = state.IsKeyDown(Keys.Right);
-            bool upArrowKeyDown = state.IsKeyDown(Keys.Up);
-            bool downArrowKeyDown = state.IsKeyDown(Keys.Down);
-            bool downArrowKeySpace = state.IsKeyDown(Keys.Space);
+            bool leftArrowKeyDown = state.IsKeyDown(leftControl);
+            bool rightArrowKeyDown = state.IsKeyDown(rightControl);
+            bool upArrowKeyDown = state.IsKeyDown(upControl);
+            bool downArrowKeyDown = state.IsKeyDown(downControl);
 
-            if (state.IsKeyDown(Keys.Left))
+
+            if (state.IsKeyDown(leftControl))
             {
                 boundingBox.X -= 10;
             }
 
-            if (state.IsKeyDown(Keys.Right))
+            if (state.IsKeyDown(rightControl))
             {
                 boundingBox.X += 10;
             }
 
-            if (state.IsKeyDown(Keys.Up))
+            if (state.IsKeyDown(upControl))
             {
                 boundingBox.Y -= 10;
             }
 
-            if (state.IsKeyDown(Keys.Down))
+            if (state.IsKeyDown(downControl))
             {
                 boundingBox.Y += 10;
             }
 
+<<<<<<< HEAD
             if (state.IsKeyDown(Keys.Space) && state.IsKeyDown(Keys.Left))
             {
                 boundingBox.X -= 30;
@@ -78,6 +87,8 @@ namespace DanAndMeganTest
 
             
 
+=======
+>>>>>>> 3ba3e1c04af594de1a8720ac596d83be5d07e984
             base.Update(gameTime);
 
 
