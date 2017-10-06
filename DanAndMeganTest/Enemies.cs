@@ -26,6 +26,18 @@ namespace DanAndMeganTest
 
         public override void Update(GameTime gameTime)
         {
+
+            if (boundingBox.X <= 0 || boundingBox.X >= 1150)
+                xVelocity *= -1;
+
+            boundingBox.X += xVelocity;
+
+            if (boundingBox.Y <= 0 || boundingBox.Y >= 550)
+                yVelocity *= -1;
+
+            boundingBox.Y += yVelocity;
+
+
             base.Update(gameTime);
 
 
